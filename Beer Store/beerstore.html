@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Beer Store</title>
+	<meta http-equiv="Content-Type" content="text/html; charset = utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&key=AIzaSyAivzP7qfJ14xChhtDA9buQxe6wuYc-4AE&sensor=false&language=en"></script>
+	<link rel="stylesheet" href="./css/style.css" />
+	<script src="js/beerstore.js"></script>
+</head>
+
+<body>
+	<div data-role="page" id="mainPage">
+		<div data-role="header">
+			<nav class="navbar navbar-dark bg-dark"> <a class="navbar-brand bg-dark" style="border:none; color:firebrick" href="#mainPage">BEERMORE</a>
+				<button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#sideMenu1" aria-controls="sideMenu1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+				<div class="collapse navbar-collapse" id="sideMenu1">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item"> <a class="nav-link" href="#mainPage">Home <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item"> <a class="nav-link" href="#aboutPage" data-transition="flip">About </a></li>
+						<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="shopBeerMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Shop Beer</a>
+							<div class="dropdown-menu" aria-labelledby="shopBeerMenu"> <a class="dropdown-item beerSelection" href="#storePage">Ale</a> <a class="dropdown-item beerSelection" href="#storePage">Malt</a> <a class="dropdown-item beerSelection" href="#storePage">Stout</a> </div>
+						</li>
+						<li class="nav-item"> <a class="nav-link" href="#myOrderPage">My Order</a> </li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<section role="main" class="ui-content" style="padding:2%">
+			<div style="background-image: url(https://www.bottleyourbrand.com/media/dol/design/1/14886128550734151341138881.png); background-size: cover; background-position: center; padding-top: 100%;"></div>
+			<hr>
+			<h3>STORE LOCATOR</h3>
+			<div id="map-canvas" style="width:auto; height:500px;"> </div>
+		</section>
+		<div data-role="footer">
+			<h5><center>&copy; BeerMore 2018</center></h5> </div>
+	</div>
+	<!-- about Page-->
+	<div data-role="page" id="aboutPage">
+		<div data-role="header">
+			<nav class="navbar navbar-dark bg-dark"> <a class="navbar-brand" style="border:none; color:firebrick" href="#mainPage" data-transition="flip">BEERMORE</a>
+				<button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#sideMenu1" aria-controls="sideMenu1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+				<div class="collapse navbar-collapse" id="sideMenu1">
+					<ul class="navbar-nav mr-auto">
+					<li class="nav-item"> <a class="nav-link" href="#mainPage" data-transition="flip">Home <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item active"> <a class="nav-link" href="#aboutPage">About <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="shopBeerMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Shop Beer</a>
+							<div class="dropdown-menu" aria-labelledby="shopBeerMenu"> <a class="dropdown-item beerSelection" href="#storePage">Ale</a> <a class="dropdown-item beerSelection" href="#storePage">Malt</a> <a class="dropdown-item beerSelection" href="#storePage">Stout</a> </div>
+						</li>
+						<li class="nav-item"> <a class="nav-link" href="#myOrderPage">My Order</a> </li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<section role="main" class="ui-content" style="padding:2%">
+			<div style=" border-radius: 12px; background-image: url(https://images.unsplash.com/photo-1524230476179-d13bcb5e3ce6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dbec0b9642718592931f0d2bc3c40448&auto=format&fit=crop&w=500&q=60); background-size: cover; padding-top: 50%;"></div>
+			<p></p>
+			<p style=""> &nbsp;&nbsp;&nbsp;&nbsp;The BeerMore is a Canadian privately owned chain of retail outlets selling local beer and other malt beverages in Oakville, Canada. Since founded in 1990, The BeerMore was formerly the only retailer permitted to sell beer for off-site consumption under Ontario's Liquor Control Act. </p>
+			<p> &nbsp;&nbsp;&nbsp;&nbsp;Amendments made to the Liquor Control Act have since allowed for the sale of single and 6 packs of beer at select supermarkets in Ontario. That was done to enhance customer access and convenience. The BeerMore, however, continues to maintain pricing exclusivity in providing consumers discounts on larger packs of beer, along with retail partners, agency stores, combination stores and manufacturer outlets. </p>
+			<center></center>
+		</section>
+		<div data-role="footer">
+			<h5><center>&copy; BeerMore 2018</center></h5> </div>
+	</div>
+	<!-- storePage -->
+	<div data-role="page" id="storePage">
+		<div data-role="header" style="background-color:rgb(251, 163, 31)">
+			<nav class="navbar navbar-dark bg-dark"> <a class="navbar-brand" style="border:none; color:firebrick" href="#mainPage">BEERMORE</a>
+				<div id="shopcart" style="text-align: right; display:inline-block; width:48%; height:auto; font-size: 1.5em"> <a href="#cartPage"><i class="fas fa-shopping-cart" style="color:white;"></i>&nbsp;<span id="cart" class="badge badge-light">0</span></a> </div>
+			</nav>
+		</div>
+		<section role="main" class="ui-content">
+			<form>
+				<div class="ui-field-contain">
+					<select name="beerType" id="beerType">
+						<option value="Ale" selected="selected">Ale</option>
+						<option value="Malt">Malt</option>
+						<option value="Stout">Stout</option>
+					</select>
+				</div>
+			</form>
+			<div id="beerList"> </div>
+		</section>
+		<div data-role="footer">
+			<h5><center>&copy; BeerMore 2018</center></h5> </div>
+	</div>
+	<!--- Cart Page --->
+	<div data-role="page" id="cartPage">
+		<div data-role="header">
+			<nav class="navbar navbar-dark bg-dark"> <a class="navbar-brand" style="border:none; color:firebrick" href="#mainPage" data-transition="flip">BEERMORE</a>
+				<button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#sideMenu1" aria-controls="sideMenu1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+				<div class="collapse navbar-collapse" id="sideMenu1">
+					<ul class="navbar-nav mr-auto">
+					<li class="nav-item"> <a class="nav-link" href="#mainPage">Home <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item"> <a class="nav-link" href="#aboutPage">About <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item active dropdown"> <a class="nav-link dropdown-toggle" href="#" id="shopBeerMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Shop Beer</a>
+							<div class="dropdown-menu" aria-labelledby="shopBeerMenu"> <a class="dropdown-item beerSelection" href="#storePage">Ale</a> <a class="dropdown-item beerSelection" href="#storePage">Malt</a> <a class="dropdown-item beerSelection" href="#storePage">Stout</a> </div>
+						</li>
+						<li class="nav-item"> <a id="myOrderPageLink" class="nav-link" href="#myOrderPage" data-transition="slideup">My Order</a> </li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<section role="main" class="ui-content">
+			<div class="container" id="cartDiv">
+				<h4 style="font-weight: bold; ">Your Cart</h4> </div>
+			<hr>
+			<table style="width: 100%; font-family: monospace;">
+				<tr>
+					<td>Subtotal:</td>
+					<td id="subTotal" style="text-align: right"></td>
+				</tr>
+				<tr>
+					<td>Tax:</td>
+					<td id="tax" style="text-align: right"></td>
+				</tr>
+				<tr style="font-size:1.5em;">
+					<td>Total: </td>
+					<td id="total" style="text-align: right"></td>
+				</tr>
+			</table>
+			<hr>
+			<table style="width: 100%;">
+				<tr>
+					<td>Pick up date:</td>
+					<td style="width:50%;">
+							<div class="input-group date">
+								<input type="text" class="form-control" id="datepicker" placeholder="MM/DD/YYYY"> </div>
+						<script>
+							$("#datepicker").datepicker();
+						</script>
+					</td>
+				</tr>
+			</table>
+			<a href="#myOrderPage"><button id="orderButton">Order</button></a>
+		</section>
+		<div data-role="footer">
+			<h5><center>&copy; BeerMore 2018</center></h5> </div>
+	</div>
+	<!-- myOrder Page -->
+	<div data-role="page" id="myOrderPage">
+		<div data-role="header">
+			<nav class="navbar navbar-dark bg-dark"> <a class="navbar-brand" style="border:none; color:firebrick" href="#mainPage" data-transition="flip">BEERMORE</a>
+				<button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#sideMenu1" aria-controls="sideMenu1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+				<div class="collapse navbar-collapse" id="sideMenu1">
+					<ul class="navbar-nav mr-auto">
+					<li class="nav-item"> <a class="nav-link" href="#mainPage">Home <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item"> <a class="nav-link" href="#aboutPage">About <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="shopBeerMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Shop Beer</a>
+							<div class="dropdown-menu" aria-labelledby="shopBeerMenu"> <a class="dropdown-item beerSelection" href="#storePage" data-transition="slidedown">Ale</a> <a class="dropdown-item beerSelection" href="#storePage" data-transition="slidedown">Malt</a> <a class="dropdown-item beerSelection" href="#storePage" data-transition="slidedown">Stout</a> </div>
+						</li>
+						<li class="nav-item active"> <a class="nav-link" href="#myOrderPage">My Order<span class="sr-only">(current)</span></a> </li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<section role="main" class="ui-content">
+			<div class="container" id="myOrderDiv">
+				<h4 style="font-weight: bold; margin-bottom: 4% ">Your Order</h4> 
+			</div>
+		</section>
+		<div data-role="footer">
+			<h5><center>&copy; BeerMore 2018</center></h5> </div>
+	</div>	
+</body>
+
+</html>

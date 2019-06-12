@@ -1,0 +1,126 @@
+{
+    "Ale":[{
+  "beername": "1792 english ale",
+  "price": "$3.10",
+  "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/4813H.jpg?itok=oFoEHKtr",
+  "alcoholContent": "(ABV):4.9%"
+},
+  {
+    "beername": "1857 kolsch-ale",
+    "price": "$3.25",
+    "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/8030%20H.png?itok=2c90MmHe",
+    "alcoholContent": "(ABV):4.8%"
+  },
+      {
+        "beername": "3 point saison",
+        "price": "$3.15",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/4404H.jpg?itok=cM9bJ68Q",
+        "alcoholContent": "(ABV): 7.0%"
+      },
+
+      {
+        "beername": "360 pale ale",
+        "price": "$3.00",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/360glass.gif?itok=9cmM-1np",
+        "alcoholContent": "(ABV):4.8%"
+      },
+      {
+        "beername": "5 oclock shadow ale",
+        "price": "$3.25",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/7702H_0.png?itok=gZE_9XVx",
+        "alcoholContent": "(ABV):4.5%"
+      },
+      {
+        "beername": "alexander keiths red",
+        "price": "$2.80",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/brand/hero/AK_RAA_2012_BotPint_R1.jpg?itok=zA3ZD_Jh",
+        "alcoholContent": "(ABV):5.0%"
+      }
+
+
+],
+
+    "Malt":[{
+      "beername": "boxer watermelon",
+      "price": "$4.60",
+      "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/brand/hero/Boxer%20Watermelon.jpg?itok=XqqvKBGm",
+      "alcoholContent": "(ABV):8.5%"
+    },
+      {
+        "beername": "colt 45",
+        "price": "$4.15",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/3245H.jpg?itok=FEO6WCr6",
+        "alcoholContent": "(ABV):8.0%"
+      },
+      {
+        "beername": "colt 45 import",
+        "price": "$4.15",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/2041H.jpg?itok=9TpnyrCs",
+        "alcoholContent": "(ABV): 8.0%"
+      },
+
+      {
+        "beername": "mad jack",
+        "price": "$2.75",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/MADJACK%20ARRAY.JPG?itok=WRxg2cIL",
+        "alcoholContent": "(ABV):5.0%"
+      },
+      {
+        "beername": "poppers ricco sangria",
+        "price": "$2.50",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/2133%20H.jpg?itok=g2C-jBmx",
+        "alcoholContent": "(ABV):7.0%"
+      },
+      {
+        "beername": "rickards radler",
+        "price": "$2.75",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/RICRA_473ml_Draught_3D.JPG?itok=UQnejN62",
+        "alcoholContent": "(ABV):3.2%"
+      }
+
+
+    ],
+
+    "Stout":[{
+      "beername": "guinness pub draught",
+      "price": "$3.05",
+      "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/brand/hero/2057-l.jpg?itok=AJfuQ7x1",
+      "alcoholContent": "(ABV):4.2%"
+    },
+      { 
+        "beername": "belhaven black scot stout",
+        "price": "$11.70",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/16586-Belhaven-Black-Pint-%26-Can.jpg?itok=R5e0Xn1s",
+        "alcoholContent": "(ABV):4.2%"
+      },
+      {
+        "beername": "kichesippi bristol stout",
+        "price": "$3.10",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/4904H.jpg?itok=F3pVMTZH",
+        "alcoholContent": "(ABV): 4.8%"
+      },
+
+      {
+        "beername": "murphys irish stout",
+        "price": "$2.65",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/MIS%20H.png?itok=uzhLDMfB",
+        "alcoholContent": "(ABV):4.1%"
+      },
+      {
+        "beername": "sleeping giant skull rock",
+        "price": "$3.00",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/5212H.png?itok=tya71Gyg",
+        "alcoholContent": "(ABV):5.1%"
+      },
+      {
+        "beername": "whitewater midnight stout",
+        "price": "$3.30",
+        "image": "http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/6216H_1.png?itok=Fi2c65-a",
+        "alcoholContent": "(ABV):4.5%"
+      }
+
+
+    ]
+
+}
+

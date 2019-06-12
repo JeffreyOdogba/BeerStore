@@ -1,0 +1,78 @@
+.colPic {
+	border-radius:10px;
+	background-size: cover; 
+	padding-top:50%;
+	margin:2%;
+}
+
+.cartTable {
+	width: 100%;
+	border-collapse: separate;
+	border: 1px solid grey;
+	border-radius: 10px;
+	margin-bottom: 1%;
+}
+
+.cartImg {
+	background-size: cover;
+	background-position: center;
+	border-radius: 10px;
+	width: 95%;
+	padding-top: 100%;
+}
+
+.MButton {
+	border: none;
+	padding: none;
+	background: none;
+	padding-left: 0;
+	padding-right: 2%;
+}
+
+.PButton {
+	border: none;
+	padding: none;
+	background: none;
+	padding-left: 2%;
+	padding-right: 0;
+}
+
+.MPSquare {
+	font-size: 1.8em;
+}
+
+#orderButton:disabled {
+	background: black;
+	opacity: 0.3;
+}
+
+.myOrderTable {
+	width: 90%;
+	border-collapse: separate;
+	border: 1px solid grey;
+	border-radius: 10px;
+	padding: 2%;
+	padding-left: 3%;
+	font-family: "Helvetica";
+}
+
+.label {
+	width: 60%;
+	font-weight: bold;
+}
+
+.value {
+	width: 30%;
+}
+
+.detailTr {
+	cursor: pointer;
+}
+
+.detailBeerName {
+	font-family: "Times New Roman";
+}
+
+.redColor {
+	color: crimson;
+}
